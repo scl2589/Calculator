@@ -15,7 +15,7 @@
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#def0ff" height="80.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="120">
+            <Text fx:id="result" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                <font>
                   <Font name="Century Gothic" size="18.0" />
                </font>
