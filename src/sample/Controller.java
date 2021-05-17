@@ -43,6 +43,10 @@ public class Controller {
     @FXML
     private void backspace(ActionEvent event) {
         String current = result.getText();
-        result.setText(current.substring(0, current.length()-1));
+        if (current.length() >= 1) {
+            result.setText(current.substring(0, current.length()-1));
+        } else {
+            result.setText("");
+        }
     }
 }
