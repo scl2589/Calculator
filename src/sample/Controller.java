@@ -22,11 +22,27 @@ public class Controller {
     @FXML
     private void operator(ActionEvent event) {
         if (((Button) event.getSource()).getText().equals("=")) {
-            result.setText(model.calculate(operator, x, Integer.parseInt(result.getText())) + "");
+            if (operator.equals("/") && Integer.parseInt(result.getText()) == 0) {
+                result.setText("Error");
+            } else {
+                result.setText(model.calculate(operator, x, Integer.parseInt(result.getText())) + "");
+            }
+
         } else {
             operator = ((Button) event.getSource()).getText();
             x = Integer.parseInt(result.getText());
             result.setText("");
         }
+    }
+
+    @FXML
+    private void clear(ActionEvent event) {
+        result.setText("");
+    }
+
+    @FXML
+    private void backspace(ActionEvent event) {
+        String current = result.getText();
+        result.setText(current.substring(0, current.length()-1));
     }
 }

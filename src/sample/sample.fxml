@@ -9,13 +9,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#def0ff" height="80.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
-            <Text fx:id="result" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <Text fx:id="result" strokeType="OUTSIDE" strokeWidth="0.0" text="">
                <font>
                   <Font name="Century Gothic" size="18.0" />
                </font>
@@ -24,7 +23,58 @@
       </StackPane>
       <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="7" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="\%">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="sqrt">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#clear" prefHeight="60.0" prefWidth="60.0" text="C">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#backspace" prefHeight="60.0" prefWidth="60.0" text="←">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="7">
                <font>
                   <Font size="18.0" />
                </font>
@@ -35,7 +85,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="8" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="8">
                <font>
                   <Font size="18.0" />
                </font>
@@ -46,7 +96,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="9" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="9">
                <font>
                   <Font size="18.0" />
                </font>
@@ -57,7 +107,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="/" onAction="#operator">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="/">
                <font>
                   <Font size="18.0" />
                </font>
@@ -75,7 +125,7 @@
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="4" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="4">
                <font>
                   <Font size="18.0" />
                </font>
@@ -86,7 +136,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="5" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="5">
                <font>
                   <Font size="18.0" />
                </font>
@@ -97,7 +147,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="6" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="6">
                <font>
                   <Font size="18.0" />
                </font>
@@ -108,7 +158,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="*" onAction="#operator">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="*">
                <font>
                   <Font size="18.0" />
                </font>
@@ -126,7 +176,7 @@
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="1" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -134,7 +184,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="2" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="2">
                <font>
                   <Font size="18.0" />
                </font>
@@ -142,7 +192,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="3" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="60.0" text="3">
                <font>
                   <Font size="18.0" />
                </font>
@@ -150,7 +200,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="-" onAction="#operator">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="-">
                <font>
                   <Font size="18.0" />
                </font>
@@ -165,7 +215,7 @@
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="130.0" text="0" onAction="#operand">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operand" prefHeight="60.0" prefWidth="130.0" text="0">
                <font>
                   <Font size="18.0" />
                </font>
@@ -173,7 +223,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="=" onAction="#operator">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="=">
                <font>
                   <Font size="18.0" />
                </font>
@@ -181,7 +231,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="+" onAction="#operator">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#operator" prefHeight="60.0" prefWidth="60.0" text="+">
                <font>
                   <Font size="18.0" />
                </font>
